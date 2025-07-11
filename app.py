@@ -67,3 +67,4 @@ if not cap.isOpened():
 else:
     print("✅ Video opened successfully")
 
+
