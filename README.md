@@ -34,11 +34,12 @@ visionguard-smart-surveillance/
 ```bash
 git clone https://github.com/YOUR_USERNAME/visionguard-smart-surveillance.git
 cd visionguard-smart-surveillance
+2️⃣ Create virtual environment
 python -m venv venv
 source venv/Scripts/activate  # Windows
 # or
 source venv/bin/activate      # Mac/Linux
-
+3️⃣ Install requirements
 pip install -r requirements.txt
 4️⃣ Add your video file
 
@@ -49,6 +50,7 @@ Place your CCTV or sample video inside the videos/ folder.
 bash
 Copy
 Edit
+5️⃣ Run the app
 python app.py
 Visit http://127.0.0.1:5000 to see the live feed!
 
