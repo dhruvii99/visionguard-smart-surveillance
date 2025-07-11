@@ -59,7 +59,10 @@ Visit http://127.0.0.1:5000 to see the live feed!
 
 ## ✅ **How to use it**
 1️⃣ **Copy this markdown text.**  
-2️⃣ Replace `YOUR_USERNAME` with your GitHub username in the clone link.  
+2️⃣ Replace `YOUR_USERNAME` with your GitHub username in the clone link.
+![Detection Screenshot](screenshots/detection.jpg)
+![Alt Text](relative/path/to/image)
+
 3️⃣ Add your name at the end.  
 4️⃣ Paste into your `README.md` file → `git add README.md` → `git commit -m "Updated README"` → `git push`.
 
