@@ -26,7 +26,10 @@ visionguard-smart-surveillance/
 ├── .gitignore # Ignore venv, logs etc.
 
 
----
+## 📸 Demo Screenshot
+
+![Detection Screenshot](screenshots/detection.jpg)
+
 
 ## ⚙️ Setup
 
