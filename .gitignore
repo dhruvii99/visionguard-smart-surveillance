@@ -22,6 +22,6 @@ __pycache__/
 *.pyo
 *.pyd
 *.sqlite3
-*.log
+
 *.env
 .DS_Store
