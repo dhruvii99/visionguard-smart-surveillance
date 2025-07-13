@@ -10,8 +10,8 @@ app = Flask(__name__)
 # 2️⃣ Load YOLOv8 model
 model = YOLO('yolov8n.pt')
 
-# 3️⃣ Setup video capture (use a sample video for now)
-cap = cv2.VideoCapture('videos/sample.mp4')  # Put your CCTV sample video in /videos
+# 3️⃣ Setup video capture
+cap = cv2.VideoCapture('videos/sample.mp4')
 
 # 4️⃣ CSV log file setup
 log_file = 'logs/detection_log.csv'
@@ -21,6 +21,7 @@ try:
     pd.read_csv(log_file)
 except:
     pd.DataFrame(columns=['timestamp', 'object']).to_csv(log_file, index=False)
+
 
 def gen_frames():
     while True:
@@ -49,22 +50,31 @@ def gen_frames():
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
+
+@app.route('/logs')
+def logs():
+    logs_df = pd.read_csv(log_file)
+    logs_data = logs_df.to_dict(orient='records')
+    return render_template('logs.html', logs=logs_data)
+
+
 if __name__ == '__main__':
+    cap = cv2.VideoCapture('videos/sample.mp4')
+    if not cap.isOpened():
+        print("❌ Video failed to open")
+    else:
+        print("✅ Video opened successfully")
     app.run(debug=True)
-   
-cap = cv2.VideoCapture('videos/sample.mp4')
-if not cap.isOpened():
-    print("❌ Video failed to open")
-else:
-    print("✅ Video opened successfully")
 
 

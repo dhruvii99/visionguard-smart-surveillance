@@ -1,13 +1,37 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>VisionGuard CCTV Feed</title>
-</head>
-<body>
-    <h1>Smart Surveillance Feed</h1>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <img src="{{ url_for('video_feed') }}" width="800">
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VisionGuard | Live CCTV Feed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-dark text-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="/">VisionGuard</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Live Feed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logs">Detection Logs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center my-5">
+    <h1 class="mb-4">🔴 Smart Surveillance Live Feed</h1>
+    <img src="{{ url_for('video_feed') }}" class="img-fluid border rounded shadow" style="max-height: 600px;">
+  </div>
+
+  <footer class="text-center text-muted py-3">
+    &copy; 2025 VisionGuard | AI CCTV System
+  </footer>
 </body>
 </html>
