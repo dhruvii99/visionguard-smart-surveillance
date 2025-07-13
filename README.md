@@ -65,15 +65,29 @@ http://127.0.0.1:5000
 --
 ✅ Object detection will run on the live feed, and detection logs will be auto-saved as CSV in logs/.
 
+---
 
-📞 Twilio Alerts
-Twilio integration for real-time SMS alerts is in progress.
+## 📞 Twilio Alerts
+
+Twilio integration for real-time SMS alerts is **in progress**.  
 Stay tuned!
 
-💡 NLP Event Reporting
+---
+
+## 💡 NLP Event Reporting
+
 Upcoming: Smart NLP module for better incident description & reporting.
-🤝 Contributing
+
+---
+
+## 🤝 Contributing
+
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-📝 License
-This project is for educational/demo purposes only.
+
+---
+
+## 📝 License
+
+This project is for **educational/demo purposes only**.
+
 
